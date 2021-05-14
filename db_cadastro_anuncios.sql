@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Maio-2021 às 03:30
+-- Tempo de geração: 14-Maio-2021 às 17:26
 -- Versão do servidor: 10.4.18-MariaDB
 -- versão do PHP: 8.0.3
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_anuncio` (
   `ID_ANUNC` int(5) NOT NULL,
-  `NO_ANUNC` char(50) NOT NULL,
-  `NO_CLIENTE` char(50) NOT NULL,
+  `NO_ANUNC` varchar(50) NOT NULL,
+  `NO_CLIENTE` varchar(50) NOT NULL,
   `DT_INIC` date NOT NULL,
   `DT_TERM` date NOT NULL,
   `VL_INVST_DIA` decimal(10,2) NOT NULL
