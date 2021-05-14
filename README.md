@@ -35,12 +35,20 @@ Pré-requisitos: JDK 14, Netbeans 12 e Xampp.
 
 Para compilar o projeto a partir do netbeans:
 - Passo 1: realize o download do projeto e extraia ele na sua pasta de projetos ou clone este repositório com o comando abaixo: 
+
 ```bash
 git clone https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios.git
 ```
 Ou
 
-<img src="https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Download.png" alt="Download" width="350"/><img src="https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Extract.png" alt="Extract" width="350"/>
+![Download_Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Download_Extract.png)
+
+- Passo 2: Crie um banco de dados local na sua máquina, com o nome "db_cadastro_anuncios", caso esteja utilizando o xampp, abra seu navegador e digite "http://localhost/phpmyadmin/", em seguida clique em novo, preencha o campo com "db_cadastro_anuncios"e clique em criar:
+- 
+![Download_Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/CriaBD.png)
+```sql
+git clone https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios.git
+```
 
 - Passo 2: Abra o Netbeans, no menu vá em file>Open Project... ou (Ctrl+Shift+O), vá até a pasta que contém o projeto, selecione ele e clique no botão "Open Project".
 ![OpenProject](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/OpenProject.PNG)
