@@ -45,7 +45,7 @@ Ou
 
 - Passo 2: Crie um banco de dados local na sua máquina, com o nome "db_cadastro_anuncios", caso esteja utilizando o xampp, abra seu navegador e digite "http://localhost/phpmyadmin/", em seguida clique em novo, preencha o campo com "db_cadastro_anuncios" e clique em criar:
 
-![Download_Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/CriaBD.png)
+![Download_Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/CriaBD_Local.png)
 
 ```sql
 create database db_cadastro_anuncios;
