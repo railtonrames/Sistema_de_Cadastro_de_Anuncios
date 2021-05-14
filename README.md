@@ -39,7 +39,8 @@ Para compilar o projeto a partir do netbeans:
 git clone https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios.git
 ```
 Ou
-![Download](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Download.png) ![Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Extract.png)
+
+![Download](<img src = "https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Download.png" width="200"/>) ![Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Extract.png)
 
 - Passo 2: Abra o Netbeans, no menu vá em file>Open Project... ou (Ctrl+Shift+O), vá até a pasta que contém o projeto, selecione ele e clique no botão "Open Project".
 ![OpenProject](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/OpenProject.PNG)
