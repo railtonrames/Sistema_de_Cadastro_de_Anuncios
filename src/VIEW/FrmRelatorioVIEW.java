@@ -9,10 +9,10 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 
-public class FrmRelatorio extends javax.swing.JFrame {
+public class FrmRelatorioVIEW extends javax.swing.JFrame {
 
     //Inicializa componentes e chama o método de formatar campos.
-    public FrmRelatorio() {
+    public FrmRelatorioVIEW() {
         initComponents();
         formatarCampo();
     }
@@ -30,7 +30,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
         tbRelatorio = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         lbCliente = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
+        txtCliente = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         lb_Tempo = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -120,7 +120,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lbCliente)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtNome)
+                                .addComponent(txtCliente)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
@@ -154,7 +154,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbCliente)
-                            .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnBuscar))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -204,7 +204,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         //Abre o formulário de menu e fecha o formulário atual caso o botão 'btnVoltar' tenha sido acionado.
-        new FrmMenu().setVisible(true);
+        new FrmMenuVIEW().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
@@ -235,20 +235,21 @@ public class FrmRelatorio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRelatorioVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRelatorioVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRelatorioVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmRelatorioVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmRelatorio().setVisible(true);
+                new FrmRelatorioVIEW().setVisible(true);
             }
         });
     }
@@ -266,9 +267,9 @@ public class FrmRelatorio extends javax.swing.JFrame {
     private javax.swing.JLabel lbTitulo;
     private javax.swing.JLabel lb_Tempo;
     private javax.swing.JTable tbRelatorio;
+    private javax.swing.JTextField txtCliente;
     private javax.swing.JFormattedTextField txtData1;
     private javax.swing.JFormattedTextField txtData2;
-    private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
 
 //Método que passa os valores digitados e retorna os dados para a tabela.
@@ -298,7 +299,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
             }
 
             //Passa as entradas informadas e chama a função do DAO para retornar o relatório.
-            ArrayList<AnuncioDTO> lista = objanunciodao.retornaRelatorio(txtNome.getText(), dt_ini, dt_fim);
+            ArrayList<AnuncioDTO> lista = objanunciodao.retornaRelatorio(txtCliente.getText(), dt_ini, dt_fim);
             //Loop que adiciona a lista na tabela.
             for (int i = 0; i < lista.size(); i++) {
                 model.addRow(new Object[]{
@@ -349,7 +350,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
 
         } catch (Exception erro) {
             //Exibe uma janela com o erro gerado.
-            JOptionPane.showMessageDialog(null, "FrmSelectVIEW|Listar Valores: " + erro);
+            JOptionPane.showMessageDialog(null, "Erro (FrmRelatorioVIEW|Listar Valores): " + erro);
         }
     }
 
@@ -357,6 +358,7 @@ public class FrmRelatorio extends javax.swing.JFrame {
     private void limpaCampos() {
         txtData1.setText("");
         txtData2.setText("");
-        txtNome.setText("");
+        txtCliente.setText("");
+        txtCliente.requestFocus();
     }
 }

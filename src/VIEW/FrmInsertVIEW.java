@@ -191,42 +191,29 @@ public class FrmInsertVIEW extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAnuncioActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        //Cria as variáveis.
-        String anuncio, nome, dt_ini, dt_fim, vl_invst, diaInicio, mesInicio, anoInicio, diaFim, mesFim, anoFim;
-        //Recebe os dados do usuário.
-        anuncio = txtAnuncio.getText();
-        nome = txtCliente.getText();
-        //Formata as entradas de data para o padrão usado no sql
-        diaInicio = txtDataInicio.getText().substring(0, 2);
-        mesInicio = txtDataInicio.getText().substring(3, 5);
-        anoInicio = txtDataInicio.getText().substring(6);
-        dt_ini = anoInicio + "-" + mesInicio + "-" + diaInicio;
-        diaFim = txtDataTermino.getText().substring(0, 2);
-        mesFim = txtDataTermino.getText().substring(3, 5);
-        anoFim = txtDataTermino.getText().substring(6);
-        dt_fim = anoFim + "-" + mesFim + "-" + diaFim;
-        vl_invst = txtInvestimento.getText();
-        //Passa os dados para a DTO.
-        AnuncioDTO objanunciodto = new AnuncioDTO();
-        objanunciodto.setNO_ANUNC(anuncio);
-        objanunciodto.setNO_CLIENTE(nome);
-        objanunciodto.setDT_INIC(dt_ini);
-        objanunciodto.setDT_TERM(dt_fim);
-        objanunciodto.setVL_INVST_DIA(vl_invst);
-        //Chama o método de cadastro na DAO.
-        AnuncioDAO objanunciodao = new AnuncioDAO();
-        objanunciodao.cadastrarAnuncio(objanunciodto);
-        //Limpa os campos.
+        //Verifica se há campos em branco.
+        if(txtAnuncio.getText().isEmpty() 
+                || txtCliente.getText().isEmpty()
+                || "__/__/____".equals(txtDataInicio.getText()) 
+                || "__/__/____".equals(txtDataTermino.getText())
+                || txtInvestimento.getText().isEmpty()
+                ){
+            JOptionPane.showMessageDialog(null, "Por favor preencha todos os campos !", "Erro", JOptionPane.ERROR_MESSAGE);
+        } else{
+        //Chama os métodos cadastrar e limpar dados.
+        cadastrar();
         limpaCampos();
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApagarActionPerformed
+        //Chama o método de limpar dados.
         limpaCampos();
     }//GEN-LAST:event_btnApagarActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         //Abre o formulário de menu e fecha o formulário atual caso o botão 'btnVoltar' tenha sido acionado.
-        new FrmMenu().setVisible(true);
+        new FrmMenuVIEW().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
@@ -291,5 +278,36 @@ public class FrmInsertVIEW extends javax.swing.JFrame {
         txtDataInicio.setText("");
         txtDataTermino.setText("");
         txtInvestimento.setText("");
+        txtAnuncio.requestFocus();
+    }
+    
+    //Cadastra o anúncio.
+    public void cadastrar() {
+        //Cria as variáveis.
+        String anuncio, nome, dt_ini, dt_fim, vl_invst, diaInicio, mesInicio, anoInicio, diaFim, mesFim, anoFim;
+        //Recebe os dados do usuário.
+        anuncio = txtAnuncio.getText();
+        nome = txtCliente.getText();
+        //Formata as entradas de data para o padrão usado no sql
+        diaInicio = txtDataInicio.getText().substring(0, 2);
+        mesInicio = txtDataInicio.getText().substring(3, 5);
+        anoInicio = txtDataInicio.getText().substring(6);
+        dt_ini = anoInicio + "-" + mesInicio + "-" + diaInicio;
+        diaFim = txtDataTermino.getText().substring(0, 2);
+        mesFim = txtDataTermino.getText().substring(3, 5);
+        anoFim = txtDataTermino.getText().substring(6);
+        dt_fim = anoFim + "-" + mesFim + "-" + diaFim;
+        vl_invst = txtInvestimento.getText();
+        //Passa os dados para a DTO.
+        AnuncioDTO objanunciodto = new AnuncioDTO();
+        objanunciodto.setNO_ANUNC(anuncio);
+        objanunciodto.setNO_CLIENTE(nome);
+        objanunciodto.setDT_INIC(dt_ini);
+        objanunciodto.setDT_TERM(dt_fim);
+        objanunciodto.setVL_INVST_DIA(vl_invst);
+        //Chama o método de cadastro na DAO.
+        AnuncioDAO objanunciodao = new AnuncioDAO();
+        objanunciodao.cadastrarAnuncio(objanunciodto);
+        //Limpa os campos.
     }
 }

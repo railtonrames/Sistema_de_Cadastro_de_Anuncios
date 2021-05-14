@@ -7,10 +7,10 @@ package VIEW;
  *
  * @author railt
  */
-public class FrmMenu extends javax.swing.JFrame {
+public class FrmMenuVIEW extends javax.swing.JFrame {
 
     //Inicializa componentes e chama o método de formatar campos.
-    public FrmMenu() {
+    public FrmMenuVIEW() {
         initComponents();
     }
 
@@ -103,8 +103,18 @@ public class FrmMenu extends javax.swing.JFrame {
         });
 
         btnEditarCadastro.setText("Editar Cadastro");
+        btnEditarCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarCadastroActionPerformed(evt);
+            }
+        });
 
         btnDeletarCadastro.setText("Deletar Cadastro");
+        btnDeletarCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeletarCadastroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -163,9 +173,19 @@ public class FrmMenu extends javax.swing.JFrame {
 
     private void btnRelatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatoriosActionPerformed
         //Abre o formulário de menu e fecha o formulário atual caso o botão 'btnRelatorios' tenha sido acionado.
-        new FrmRelatorio().setVisible(true);
+        new FrmRelatorioVIEW().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnRelatoriosActionPerformed
+
+    private void btnEditarCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarCadastroActionPerformed
+        new FrmUpdateDeleteVIEW().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnEditarCadastroActionPerformed
+
+    private void btnDeletarCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarCadastroActionPerformed
+        new FrmUpdateDeleteVIEW().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnDeletarCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,20 +204,21 @@ public class FrmMenu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmMenuVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmMenuVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmMenuVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmMenuVIEW.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmMenu().setVisible(true);
+                new FrmMenuVIEW().setVisible(true);
             }
         });
     }
