@@ -16,31 +16,25 @@ O programa consiste em um cadastro de anúncios, onde baseado nos valores inseri
 ### Tela de Editar e Excluir
 ![View 4](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/View_Editar-Excluir.PNG)
 
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/L%C3%B3gico_Cadastro_de_Anuncios.png)
+## Modelo Lógico
+![Modelo Lógico](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/L%C3%B3gico_Cadastro_de_Anuncios.png)
 
 # Tecnologias utilizadas
-## Back end
-- Java
-## Front end
-- Java
-## Implantação em produção
-- Back end: Java
-- Front end: Java
+##Ambientes de desenvolvimento
+- Apache Netbeans IDE 12.0
+- Xampp
+##Bibliotecas
+- mysql-connector-java-5.1.47.jar
+- JDK 14.0.2
+## Implantação
+- Front/Back end: Java
 - Banco de dados: MariaDB
 
-# Como executar o projeto
+# Como compilar o projeto
+Pré-requisitos: JDK 14 , Netbeans 12 e Xampp.
 
-## Back end
-Pré-requisitos: Java 11
 
 ```bash
-```
-
-## Front
-Pré-requisitos: Java 11
-```bash
-
 ```
 
 # Autor
