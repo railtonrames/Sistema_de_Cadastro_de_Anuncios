@@ -30,11 +30,12 @@ O programa consiste em um cadastro de anúncios, onde baseado nos valores inseri
 - Front/Back end: Java
 - Banco de dados: MariaDB
 
-# Como compilar o projeto
+# Como compilar e executar o projeto
 Pré-requisitos: JDK 14 , Netbeans 12 e Xampp.
 
-
+Para executar o projeto a partir da linha de comando, vá para a pasta dist e digite o seguinte:
 ```bash
+java -jar "CadastroDeAnuncios.jar"
 ```
 
 # Autor
