@@ -30,9 +30,8 @@ Pré-requisitos: Java 11
 ```bash
 ```
 
-## Front end web
-Pré-requisitos: npm / yarn
-
+## Front
+Pré-requisitos: Java 11
 ```bash
 
 ```
