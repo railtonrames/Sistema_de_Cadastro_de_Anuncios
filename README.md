@@ -40,6 +40,8 @@ git clone https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios.git
 ```
 Ou
 
+<img src="https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Download.png" width="200"/>) ![Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Extract.png" alt="Download" width="200"/>
+
 ![Download](<img src = "https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Download.png" width="200"/>) ![Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Extract.png)
 
 - Passo 2: Abra o Netbeans, no menu vá em file>Open Project... ou (Ctrl+Shift+O), vá até a pasta que contém o projeto, selecione ele e clique no botão "Open Project".
