@@ -2,15 +2,22 @@
 
 # Sobre o projeto
 
-Sistema de Cadastro de Anúncios é um programa que permite o cadastro de anúncios com relatórios, feito em Java e com conexão à banco de dados sql, contruído durante o **Desafio de Programação Academia Capgemini**, é a segunda parte do desafio organizado pela [ProWay] (https://www.proway.com.br/academiatecnicacapgeminidesafio "Site do Desafio").
+Sistema de Cadastro de Anúncios é um programa que permite o cadastro de anúncios com relatórios, feito em Java e com conexão à banco de dados sql, contruído durante o **Desafio de Programação Academia Capgemini**, é a segunda parte do desafio organizado pela [ProWay](https://www.proway.com.br/academiatecnicacapgeminidesafio "Site do Desafio").
 
 O programa consiste em um cadastro de anúncios, onde baseado nos valores inseridos é gerado um relatório indicando valor total investido, quatidade máxima de visualizações, cliques e compartilhamentos. Os dados inseridos são armazenados em um banco de dados sql, conta com uma interface gráfica para realizar as operações do CRUD e os relatórios podem ser filtrados por cliente e/ou intervalo de tempo.
 
 ## Layout
-![Mobile 1](url) ![Mobile 2](url)
+### Menu
+![View 1](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/View_Menu.PNG)
+### Tela de Cadastro
+![View 2](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/View_Cadastrar_Ex.PNG)
+### Tela de Relatórios
+![View 3](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/View_Relatorios_Ex.PNG)
+### Tela de Editar e Excluir
+![View 4](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/View_Editar-Excluir.PNG)
 
 ## Modelo conceitual
-![Modelo Conceitual](url)
+![Modelo Conceitual](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/L%C3%B3gico_Cadastro_de_Anuncios.png)
 
 # Tecnologias utilizadas
 ## Back end
