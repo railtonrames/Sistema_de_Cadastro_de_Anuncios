@@ -20,10 +20,10 @@ O programa consiste em um cadastro de anúncios, onde baseado nos valores inseri
 ![Modelo Lógico](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/L%C3%B3gico_Cadastro_de_Anuncios.png)
 
 # Tecnologias utilizadas
-##Ambientes de desenvolvimento
+## Ambientes de desenvolvimento
 - Apache Netbeans IDE 12.0
 - Xampp
-##Bibliotecas
+## Bibliotecas
 - mysql-connector-java-5.1.47.jar
 - JDK 14.0.2
 ## Implantação
@@ -31,7 +31,21 @@ O programa consiste em um cadastro de anúncios, onde baseado nos valores inseri
 - Banco de dados: MariaDB
 
 # Como compilar e executar o projeto
-Pré-requisitos: JDK 14 , Netbeans 12 e Xampp.
+Pré-requisitos: JDK 14, Netbeans 12 e Xampp.
+
+Para compilar o projeto a partir do netbeans:
+- Passo 1: realize o download do projeto e extraia ele na sua pasta de projetos ou clone este repositório com o comando abaixo: 
+```bash
+git clone https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios.git
+```
+Ou
+![Download](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Download.png) ![Extract](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/Extract.png)
+
+- Passo 2: Abra o Netbeans, no menu vá em file>Open Project... ou (Ctrl+Shift+O), vá até a pasta que contém o projeto, selecione ele e clique no botão "Open Project".
+![OpenProject](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/OpenProject.PNG)
+
+- Passo 3: Aperte a tecla F6 para rodar o projeto.
+![RunProject](https://github.com/railtonrames/Sistema_de_Cadastro_de_Anuncios/blob/master/assets/RunProject.PNG)
 
 Para executar o projeto a partir da linha de comando, vá para a pasta dist e digite o seguinte:
 ```bash
